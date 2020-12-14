@@ -7,7 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.junit.Test;
 
 
-//test
+//test just to make sure it works
 @EventHandler
     public void onMobDeath(EntityDeathEvent event) {
         if(event.getEntity().getKiller() instanceof Player) {
