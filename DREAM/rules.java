@@ -21,7 +21,7 @@ import org.bukkit.inventory.ItemStack;
         Entity e = event.getEntity();
         if (e instanceof Blaze) {
             double chance = random.nextDouble();
-            if (chance <= 0.50) {
+            if (chance <= 0.75) { //increase chance of drop from 0.50 >> 0.75
                 event.getDrops().add(new ItemStack(Material.BLAZE_ROD, 1));
             }
         }
