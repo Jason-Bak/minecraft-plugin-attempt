@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
         if(event.getEntity().getKiller() instanceof Player) {
             if(event.getEntity().getType() == EntityType.ZOMBIE){
                 event.getDrops().add(new ItemStack(Material.DIAMOND, 1));
+                verify(player).sendMessage("Have a random " + Material.TORCH);
             }
         }
     }
