@@ -26,4 +26,17 @@ import org.bukkit.inventory.ItemStack;
             }
         }
     }
+@EventHandler
+    public void onEndermanDeath(EntityDeathEvent event){    
+        Entity e = event.getEntity();
+        if (e instanceof Enderman) {
+            double chance = random.nextDouble();
+            if (chance <= 0.75) { //increase chance of drop from 0.50 >> 0.75
+                event.getDrops().add(new ItemStack(Material.ENDER_PEARL, 1));
+            }
+            if (chance <= 0.10) { //boosts chance of getting more pearls
+                even.getDrops().add(new ItemStack(Material.ENDER_PEARL, 2));
+            }
+        }
+    }
 //not sure if this is correct
