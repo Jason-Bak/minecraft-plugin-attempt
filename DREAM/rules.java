@@ -12,7 +12,6 @@ import org.junit.Test;
     public void onMobDeath(EntityDeathEvent event) {
         if(event.getEntity().getKiller() instanceof Player) {
             if(event.getEntity().getType() == EntityType.ZOMBIE){
-                event.getDrops().add(new ItemStack(Material.DIAMOND, 1));
                 verify(player).sendMessage("Killed a zombie!");
             }
         }
