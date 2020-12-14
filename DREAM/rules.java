@@ -17,7 +17,7 @@ import org.junit.Test;
             }
         }
     }
-
+//not a test
 @EventHandler
     public void onMobDeath(EntityDeathEvent event){
         if(event.getEntity().getKiller() instanceof Player){
