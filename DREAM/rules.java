@@ -24,6 +24,8 @@ import org.bukkit.inventory.ItemStack;
             if (chance <= 0.75) { //increase chance of drop from 0.50 >> 0.75
                 event.getDrops().add(new ItemStack(Material.BLAZE_ROD, 1));
             }
+            if (chance <= 0.25) { //increase chance of getting multiple pearls
+                event.getDrops().add(new ItemStack(Material.BLAZE_ROD, 2));
         }
     }
 @EventHandler
